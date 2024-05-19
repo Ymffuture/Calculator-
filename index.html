@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form id="calculatorForm">
+        <label for="num1">Enter first number:</label>
+        <input type="number" id="num1" name="num1" required><br><br>
+        
+        <label for="num2">Enter second number:</label>
+        <input type="number" id="num2" name="num2" required><br><br>
+        
+        <label for="operation">Select operation:</label><br>
+        <input type="radio" id="add" name="operation" value="addition" checked>
+        <label for="add">Addition</label><br>
+        
+        <input type="radio" id="subtract" name="operation" value="subtraction">
+        <label for="subtract">Subtraction</label><br>
+        
+        <input type="radio" id="multiply" name="operation" value="multiplication">
+        <label for="multiply">Multiplication</label><br>
+        
+        <input type="radio" id="divide" name="operation" value="division">
+        <label for="divide">Division</label><br><br>
+        
+        <button type="button" onclick="calculate()">Calculate</button>
+        <button type="button" onclick="reset()">Reset</button><br><br>
+        
+        <label for="result">Result:</label>
+        <output id="result"></output>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
