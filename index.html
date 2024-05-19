@@ -1,39 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Simple Calculator</h1>
-    <form id="calculatorForm">
-        <label for="num1">Enter first number:</label>
-        <input type="number" id="num1" name="num1" required><br><br>
-        
-        <label for="num2">Enter second number:</label>
-        <input type="number" id="num2" name="num2" required><br><br>
-        
-        <label for="operation">Select operation:</label><br>
-        <input type="radio" id="add" name="operation" value="addition" checked>
-        <label for="add">Addition</label><br>
-        
-        <input type="radio" id="subtract" name="operation" value="subtraction">
-        <label for="subtract">Subtraction</label><br>
-        
-        <input type="radio" id="multiply" name="operation" value="multiplication">
-        <label for="multiply">Multiplication</label><br>
-        
-        <input type="radio" id="divide" name="operation" value="division">
-        <label for="divide">Division</label><br><br>
-        
-        <button type="button" onclick="calculate()">Calculate</button>
-        <button type="button" onclick="reset()">Reset</button><br><br>
-        
-        <label for="result">Result:</label>
-        <output id="result"></output>
-    </form>
+    <div class="container mt-5">
+        <h1 class="text-center">Simple Calculator</h1>
+        <form id="calculatorForm" class="mt-3">
+            <div class="form-group">
+                <label for="num1">Enter first number:</label>
+                <input type="number" id="num1" name="num1" class="form-control" required aria-label="First Number">
+            </div>
+            
+            <div class="form-group">
+                <label for="num2">Enter second number:</label>
+                <input type="number" id="num2" name="num2" class="form-control" required aria-label="Second Number">
+            </div>
+            
+            <div class="form-group">
+                <label>Select operation:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="add" name="operation" value="addition" checked aria-label="Addition">
+                    <label class="form-check-label" for="add">Addition</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="subtract" name="operation" value="subtraction" aria-label="Subtraction">
+                    <label class="form-check-label" for="subtract">Subtraction</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="multiply" name="operation" value="multiplication" aria-label="Multiplication">
+                    <label class="form-check-label" for="multiply">Multiplication</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="divide" name="operation" value="division" aria-label="Division">
+                    <label class="form-check-label" for="divide">Division</label>
+                </div>
+            </div>
+            
+            <button type="button" onclick="calculate()" class="btn btn-primary">Calculate</button>
+            <button type="button" onclick="reset()" class="btn btn-secondary">Reset</button><br><br>
+            
+            <div class="form-group">
+                <label for="result">Result:</label>
+                <output id="result" class="form-control" aria-live="assertive"></output>
+            </div>
+        </form>
+    </div>
 
     <script src="main.js"></script>
 </body>
